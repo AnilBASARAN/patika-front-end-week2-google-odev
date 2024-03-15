@@ -62,6 +62,7 @@
           <div class="input-enter">
             <div class="input-area">
               <input
+              id="search-box"
                 type="text"
                 class="input"
                 maxlength="2048"
@@ -75,12 +76,8 @@
       </div>
 
       <div class="buttons">
-        <a href=""
-          ><button class="googlesearch">Google Search</button></a
-        >
-        <a href=""
-          ><button class="feelinglucky">I'm Feeling Lucky</button></a
-        >
+        <button id="search-button" class="googlesearch">Google Search</button>
+        <button class="feelinglucky">I'm Feeling Lucky</button>
       </div>
     </div>
 
@@ -123,5 +120,15 @@
         </li>
       </ul>
     </nav>
+
+    <script>
+      document.getElementById("search-button").addEventListener("click", function() {
+    var query = document.getElementById("search-box").value;
+    if (query.trim() !== "") {
+        window.location.href = "https://www.google.com/search?q=" + encodeURIComponent(query);
+    }
+});
+    </script>
+
   </body>
 </html>
