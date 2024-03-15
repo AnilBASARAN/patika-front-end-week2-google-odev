@@ -198,3 +198,8 @@ box-shadow: 0 2px 3px 0 rgba(0,0,0,0.24), 0 2px 5px 0 rgba(0,0,0,0.19);
   float: right;
   display: inline;
 }
+
+#profile-pic1 {
+  border-radius: 50%;
+  
+}
